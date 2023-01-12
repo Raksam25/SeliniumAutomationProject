@@ -1,13 +1,14 @@
-package com.telus.selenium.assignment;
+package com.selenium.automation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AssignmentHandlingDate {
+public class HandlingCalendar {
+
 	
-		public static void selectDate(WebElement calendar,String year,String monthName,String day,WebDriver driver) {
+	public static void selectDate(WebElement calendar,String year,String monthName,String day,WebDriver driver) {
 		// Click on Calendar
 		calendar.click();
 		// Retrieve the current year and month
@@ -50,6 +51,6 @@ public class AssignmentHandlingDate {
 				// Selecting the Return Date
 				AssignmentHandlingDate.selectDate(returning, "2022", "Nov", "30", driver);
 				
-	}
-
+	}	
+	
 }

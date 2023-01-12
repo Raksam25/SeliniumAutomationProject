@@ -1,4 +1,4 @@
-package com.telus.selenium.assignment;
+package com.selenium.automation;
 
 import java.util.List;
 import org.openqa.selenium.By;

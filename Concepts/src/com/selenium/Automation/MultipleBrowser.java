@@ -1,4 +1,4 @@
-package com.telus.selenium.assignment;
+package com.selenium.automation;
 
 import java.util.Iterator;
 import java.util.Set;
