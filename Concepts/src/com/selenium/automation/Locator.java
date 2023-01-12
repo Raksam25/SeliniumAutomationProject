@@ -10,48 +10,46 @@ public class Locator {
 
 
 		// Set the System properties for Chrome Driver
-				System.setProperty("webdriver.chrome.driver",".\\Driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",".\\Driver\\chromedriver.exe");
 
-				// Create Object instance for Chrome driver
-				WebDriver driver = new ChromeDriver();
+		// Create Object instance for Chrome driver
+		WebDriver driver = new ChromeDriver();
 
-				//Launch URL 
-				String url = "https://nxtgenaiacademy.com/demo-site/";
-				driver.get(url);
+		//Launch URL 
+		String url = "https://demo.opencart.com/";
+		driver.get(url);
 
-				// Maximize browser window
-				driver.manage().window().maximize();
+		// Maximize browser window
+		driver.manage().window().maximize();
 
-				// ID Locator
-				//First Name
-				driver.findElement(By.id("vfb-5")).sendKeys("Rakesh");
-				//Last Name
-				driver.findElement(By.id("vfb-7")).sendKeys("Samant");
 
-				// xpath Locator
-				// Select Gender Radio button
-				driver.findElement(By.xpath("//*[@value='Male']"));
+		// linkText locator
+		driver.findElement(By.linkText("My Account")).click();
+		driver.findElement(By.linkText("Login")).click();
+		
+		driver.navigate().refresh();
 
-				// Name locator
-				// Address 1
-				driver.findElement(By.name("vfb-13[address]")).sendKeys("Noida");
-				// Address 2
-				driver.findElement(By.name("vfb-13[address-2]")).sendKeys("Delta 1");
+		// ID Locator
+		driver.findElement(By.id("input-email")).sendKeys("test123@noaddress.com");
 
-				// cssSelector locator
-				// Enter email
-				driver.findElement(By.cssSelector("#vfb-14")).sendKeys("noname@noaddress.com");
 
-				// linkText locator
-				//Click on About Me
-				driver.findElement(By.linkText("ABOUT ME")).click();
-				
-				// partialLinkText locator
-				// Click on Python Libraries Link
-				driver.findElement(By.partialLinkText("LIBRARIES")).click();
-			
-				// Close the application
-				driver.close();
+		// Name locator
+		driver.findElement(By.name("password")).sendKeys("12345");
+
+		// partialLinkText locator
+		driver.findElement(By.partialLinkText("Forgotten")).click();
+
+		// xpath Locator
+		driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("test123@noaddress.com");
+
+		driver.navigate().back();
+
+		// cssSelector locator
+		driver.findElement(By.cssSelector("#form-login > button")).click();
+
+
+		// Close the application
+		// driver.close();
 
 	}
 
