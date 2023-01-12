@@ -2,16 +2,15 @@ package com.selenium.automation;
 
 import java.util.Iterator;
 import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MultipleBrowser {
 
-	public static void main(String[] args)throws InterruptedException {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) {
 
-		
 		// Set system property for the chrome driver
 		System.setProperty("webdriver.chrome.driver",".\\Driver\\chromedriver.exe");
 		//Creating instance of Chrome driver and launching
@@ -68,7 +67,7 @@ public class MultipleBrowser {
 		driver.close();
 		System.out.println("Parent Browser is closed");
 		
-		
+
 	}
 
 }
