@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AssignmentHandlingDate {
+public class HandlingDate {
 	
 		public static void selectDate(WebElement calendar,String year,String monthName,String day,WebDriver driver) {
 		// Click on Calendar
