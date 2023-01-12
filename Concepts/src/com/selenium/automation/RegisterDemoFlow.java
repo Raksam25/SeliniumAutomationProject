@@ -1,5 +1,13 @@
 package com.selenium.automation;
 
+/*=============================================================================
+| Author   :  Rakesh Samant
+| LinkedIn :  rakesh-samant-2505
+| Project  :  Automation Testing
+| Purpose  :  To understand basic selenium script flow and validation
+| Date     :  12-Jan-2023
+ =============================================================================*/
+ 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
