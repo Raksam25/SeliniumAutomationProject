@@ -9,7 +9,11 @@ package com.selenium.automation;
  =============================================================================*/
 
 /*
- * Locator : It is an address that identifies a web element uniquely within the web page.
+ * Locator : It is an address that identifies a web element uniquely within the web page. 
+ *           Locating the elements based on the provided locator values.
+ * Many locators will match multiple elements on the page:
+ *           find element method will return a reference to the first element found within a given context.
+ *           find elements methods return a collection of element references. If there are no matches, an empty list is returned.
  * Types of Locators:
     1. id
     2. name

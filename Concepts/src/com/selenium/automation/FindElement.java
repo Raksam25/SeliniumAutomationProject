@@ -28,7 +28,7 @@ package com.selenium.automation;
  *  findelement : is the method to locate element on the webpage.
  *  By : is the mechanism used to locate elements within a document with the help of locator value. 
  *  locator : It is an address that identifies a web element uniquely within the web page.  
- *  findElement takes By object as the parameter and returns an object of type list WebElement.      
+ *  findElement takes By object as the parameter and returns an object of type WebElement.      
  */
 
 //------------------------------------------------------------------------------------------------------
