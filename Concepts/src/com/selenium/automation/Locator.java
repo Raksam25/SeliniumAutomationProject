@@ -16,14 +16,14 @@ package com.selenium.automation;
  *           find elements methods return a collection of element references. If there are no matches, an empty list is returned.
            
               Types of Locators:
-1- class name:	Locates elements whose class name contains the search value (compound class names are not permitted)
-2- css selector:	Locates elements matching a CSS selector
-3- id:	Locates elements whose ID attribute matches the search value
-4- name:	Locates elements whose NAME attribute matches the search value
-5- link text:	Locates anchor elements whose visible text matches the search value
+1- class name:	        Locates elements whose class name contains the search value (compound class names are not permitted)
+2- css selector:        Locates elements matching a CSS selector
+3- id:	                Locates elements whose ID attribute matches the search value
+4- name:	            Locates elements whose NAME attribute matches the search value
+5- link text:	        Locates anchor elements whose visible text matches the search value
 6- partial link text:	Locates anchor elements whose visible text contains the search value. If multiple elements are matching, only the first one will be selected.
-7- tag name:	Locates elements whose tag name matches the search value
-8- xpath:	Locates elements matching an XPath expression
+7- tag name:	        Locates elements whose tag name matches the search value
+8- xpath:	            Locates elements matching an XPath expression
  */
  
 import org.openqa.selenium.By;
