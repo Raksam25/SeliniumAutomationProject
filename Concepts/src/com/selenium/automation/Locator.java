@@ -1,81 +1,82 @@
 package com.selenium.automation;
 
 /*=============================================================================
-| author   :  rakesh samant
-| linkedin :  rakesh-samant-2505
-| project  :  automation testing
-| purpose  :  To understand locators in selenium
-| date     :  12-jan-2023
+| Author   :  Rakesh Samant
+| LinkedIn :  rakesh-samant-2505
+| Project  :  Automation Testing
+| Purpose  :  To understand locators in Selenium
+| Date     :  12-Jan-2023
  =============================================================================*/
- 
- /*
-Type of locators in selenium:
-1. id
-2. name
-3. linktext
-4. partiallinktext
-5. xpath
-6. cssselector
-7. tagname
-8. classname
-*/
 
-import org.openqa.selenium.by;
-import org.openqa.selenium.webdriver;
-import org.openqa.selenium.chrome.chromedriver;
+/*
+ * Locator : It is an address that identifies a web element uniquely within the web page.
+ * Types of Locators:
+    1. id
+    2. name
+    3. linkText
+    4. partialLinkText
+    5. xpath
+    6. cssSelector
+    7. tagName
+    8. className
+ */
+ 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Locator {
 
-	public static void main(string[] args) {
+	public static void main(String[] args) {
 
 
-		// set the system properties for chrome driver
-		system.setproperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
+		// Set the System properties for Chrome Driver
+		System.setProperty("webdriver.chrome.driver",".\\Driver\\chromedriver.exe");
 
-		// create object instance for chrome driver
-		webdriver driver = new chromedriver();
+		// Create Object instance for Chrome driver
+		WebDriver driver = new ChromeDriver();
 
-		//launch url 
-		string url = "https://demo.opencart.com/";
+		//Launch URL 
+		String url = "https://demo.opencart.com/";
 		driver.get(url);
 
-		// maximize browser window
+		// Maximize browser window
 		driver.manage().window().maximize();
 
 
-		// linktext locator
-		driver.findelement(by.linktext("my account")).click();
-		driver.findelement(by.linktext("login")).click();
+		// linkText locator
+		driver.findElement(By.linkText("My Account")).click();
+		driver.findElement(By.linkText("Login")).click();
 		
 		driver.navigate().refresh();
 
-		// id locator
-		driver.findelement(by.id("input-email")).sendkeys("test123@noaddress.com");
+		// ID Locator
+		driver.findElement(By.id("input-email")).sendKeys("test123@noaddress.com");
 
 
-		// name locator
-		driver.findelement(by.name("password")).sendkeys("12345");
+		// Name locator
+		driver.findElement(By.name("password")).sendKeys("12345");
 
-		// partiallinktext locator
-		driver.findelement(by.partiallinktext("forgotten")).click();
+		// partialLinkText locator
+		driver.findElement(By.partialLinkText("Forgotten")).click();
 
-		// xpath locator
-		driver.findelement(by.xpath("//*[@id=\"input-email\"]")).sendkeys("test123@noaddress.com");
+		// xpath Locator
+		driver.findElement(By.xpath("//*[@id=\"input-email\"]")).sendKeys("test123@noaddress.com");
 		
 		// class name
-		driver.findelement(by.classname("btn-primary")).click();
+		driver.findElement(By.className("btn-primary")).click();
 
 		driver.navigate().back();
 
-		// cssselector locator
-		driver.findelement(by.cssselector("#form-login > button")).click();
+		// cssSelector locator
+		driver.findElement(By.cssSelector("#form-login > button")).click();
         
-		// tagname
-		string text = driver.findelement(by.tagname("h2")).gettext();
-		system.out.println(text);
+		// tagName
+		String text = driver.findElement(By.tagName("h2")).getText();
+		System.out.println(text);
 
 		
-		// close the application
+		// Close the application
 		driver.close();
 
 	}
